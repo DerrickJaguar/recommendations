@@ -1,0 +1,16 @@
+# Include all Python source files
+include *.py
+
+# Include README and license files
+include README.md
+include LICENSE
+
+# Include any static and template files for Django apps
+recursive-include recommendations/static *
+recursive-include recommendations/templates *
+
+# Include migrations
+recursive-include recommendations/migrations *.py
+
+# Include other necessary files
+recursive-include recommendations/engine *.py

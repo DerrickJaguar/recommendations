@@ -1,0 +1,86 @@
+Enterprise Name
+BankEase AI
+
+Mission Statement
+BankEase AI aims to revolutionize customer interactions in the banking sector by providing secure, intelligent, and user-friendly virtual assistance. We strive to make banking simple, accessible, and efficient for everyone.
+
+General Activities
+Offering AI-powered virtual agents for banking support.
+Streamlining customer service operations through automation.
+Ensuring secure and compliant communication between customers and financial institutions.
+Continuously improving user satisfaction through data-driven insights and personalization.
+Domain
+Banking
+
+Use Case
+Customer Support for Retail Banking
+
+Use Case Description
+The virtual agent will serve as the first point of contact for customers, handling routine inquiries and basic banking operations. It will address customer needs quickly while maintaining security and professionalism.
+
+Steps Involved
+User Authentication: Validate the customer's identity using OTP, security questions, or biometrics.
+Query Identification: Use natural language understanding (NLU) to determine the user's intent.
+Information Retrieval: Access banking systems via secure APIs to fetch or update relevant data.
+Response Generation: Provide precise, context-aware answers to user queries.
+Follow-up and Recommendations: Offer related services or suggestions based on customer interactions.
+Escalation: Transfer complex or unresolved queries to human customer support.
+Required Data Sources
+Customer Information: Name, account details, recent transactions.
+Knowledge Base: FAQs, policies, and guidelines.
+Banking System APIs: For real-time account data and transaction handling.
+Fraud Detection Rules: To ensure security and flag suspicious activities.
+Virtual Agent Persona
+Name: Finley
+Role: A friendly yet professional banking assistant.
+Appearance: A sleek, interactive chatbot interface with a minimalist, trust-inspiring design.
+Tone of Voice:
+
+Friendly: For general inquiries ("Hi! How can I assist you today?")
+Empathetic: For complaints or sensitive issues ("I’m here to help. Let me address this right away.")
+Professional: For official matters ("Your account balance as of today is $5,000.")
+Target Audience
+Who:
+
+Primary Users: Retail banking customers (individuals managing personal accounts).
+Secondary Users: Small business owners using basic banking services.
+Demographics:
+
+Ages 20–60, technology-friendly users who prefer online banking.
+Customers requiring quick answers without visiting a branch.
+Approach to Jailbreaking
+Intent Monitoring: Use fine-tuned LLM prompts to prevent the agent from generating unsafe or unauthorized responses.
+Fallback Responses: If the agent detects unsupported or sensitive requests, it redirects to a human agent or states:
+"I cannot assist with that specific request, but let me connect you to a representative who can help."
+Security Rules: Block queries that try to bypass authentication or access restricted actions.
+System Prompt for Virtual Assistant
+"You are Finley, a virtual banking assistant for BankEase AI. Your role is to assist customers with their banking needs, such as checking account balances, transaction histories, and answering FAQs. Always verify customer identity before providing sensitive information. Maintain a friendly and professional tone, and never respond to unauthorized or malicious queries. If unsure, redirect the user to a human agent."
+
+Techniques Used
+Retrieval-Augmented Generation (RAG):
+
+Integrate a knowledge base and real-time banking APIs for accurate and context-aware responses.
+Prompt Engineering:
+
+Craft role-based prompts to restrict responses within banking operations.
+Tone of Voice Management:
+
+Use predefined response templates for different scenarios to ensure tone consistency.
+Jailbreaking Prevention:
+
+Incorporate strict filtering for requests outside of the agent's allowed scope.
+Implementation Plan in LLM Playground
+Prepare Data Sources:
+
+Import FAQs, knowledge bases, and secure API integration details.
+Iterate System Prompts:
+
+Test prompts against various scenarios, including:
+Supported requests (e.g., "What’s my account balance?").
+Unsupported requests (e.g., "Transfer $10,000 to this account.").
+Simulate Scenarios:
+
+Evaluate the agent's response quality for customer inquiries, ensuring accuracy and compliance.
+Monitor and Improve:
+
+Continuously refine the system prompt and data sources based on feedback and performance metrics.
